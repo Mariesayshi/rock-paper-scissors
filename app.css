@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Barlow Semi Condensed";
+  color: white;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.appCont {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoAndScore {
+  width: 100%;
+  max-width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 8px;
+}
+
+.score {
+  background-color: white;
+  color: hsl(229, 64%, 46%);
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  width: 5rem;
+  height: 5rem;
+}
+
+.scoreHeading {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.scoreNum {
+  color: hsl(229, 25%, 31%);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.logo {
+  width: 4rem;
+  margin-left: 1rem;
+}
+
+.buttonsAndPentagon {
+  position: relative;
+  width: 20rem;
+  height: auto;
+  display: flex;
+}
+
+.pentagon {
+  position: absolute;
+  width: 13.5rem;
+  top: 3.5rem;
+  left: 3.5rem;
+  z-index: -10;
+}
+
+.buttonsCont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.spockAndPaper {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lizardAndRock {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.spockImg,
+.lizardImg,
+.paperImg,
+.rockImg {
+  height: 2.5rem;
+}
+
+.scissorsImg,
+.spockImg {
+  height: 2.45rem;
+}
+
+.rockImg {
+  height: 2rem;
+}
+
+.scissors,
+.spock,
+.paper,
+.lizard,
+.rock {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: inset #b9c0d16b 0px 5px 0px 0px;
+}
+
+.btnCont {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: top 0.05s, box-shadow 1s;
+}
+
+.hasActive.scissorsCont:active {
+  top: 1rem;
+}
+.hasActive.paperCont:active {
+  top: 0.45rem;
+}
+.hasActive.rockCont:active {
+  top: 0.8rem;
+}
+.hasActive.spockCont:active {
+  top: 0.35rem;
+}
+.hasActive.lizardCont:active {
+  top: 0.77rem;
+}
+
+.scissorsCont {
+  background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: #c56d21 0px 6px 0px -1px;
+  top: 0.75rem;
+  left: -0.2rem;
+}
+.scissorsCont.winnerHalo {
+  box-shadow: #c56d21 0px 6px 0px -1px, 0px 0px 0px 25px rgb(255 255 255 / 3%),
+    0px 0px 0px 50px rgb(255 255 255 / 3%),
+    0px 0px 0px 80px rgb(255 255 255 / 3%);
+}
+.paperCont {
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: #2e47b8 0px 6px 0px -1px;
+  top: 0.2rem;
+  left: 0.2rem;
+}
+.paperCont.winnerHalo {
+  box-shadow: #2e47b8 0px 6px 0px -1px, 0px 0px 0px 25px rgb(255 255 255 / 3%),
+    0px 0px 0px 50px rgb(255 255 255 / 3%),
+    0px 0px 0px 80px rgb(255 255 255 / 3%);
+}
+
+.rockCont {
+  background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: #9d1836 0px 6px 0px -1px;
+  top: 0.55rem;
+  left: 0.05rem;
+}
+.rockCont.winnerHalo {
+  box-shadow: #9d1836 0px 6px 0px -1px, 0px 0px 0px 25px rgb(255 255 255 / 3%),
+    0px 0px 0px 50px rgb(255 255 255 / 3%),
+    0px 0px 0px 80px rgb(255 255 255 / 3%);
+}
+.spockCont {
+  background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  box-shadow: #2f8ba9 0px 6px 0px -1px;
+  top: 0.1rem;
+  left: -0.35rem;
+}
+.spockCont.winnerHalo {
+  box-shadow: #2f8ba9 0px 6px 0px -1px, 0px 0px 0px 25px rgb(255 255 255 / 3%),
+    0px 0px 0px 50px rgb(255 255 255 / 3%),
+    0px 0px 0px 80px rgb(255 255 255 / 3%);
+}
+
+.lizardCont {
+  background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  box-shadow: #6135aa 0px 6px 0px -1px;
+  top: 0.52rem;
+  left: -0.25rem;
+}
+.lizardCont.winnerHalo {
+  box-shadow: #6135aa 0px 6px 0px -1px, 0px 0px 0px 25px rgb(255 255 255 / 3%),
+    0px 0px 0px 50px rgb(255 255 255 / 3%),
+    0px 0px 0px 80px rgb(255 255 255 / 3%);
+}
+
+.rulesBtn {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  padding: 0.7rem;
+  text-align: center;
+  border: 2px solid hsl(217, 16%, 63%);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1.3rem;
+  max-width: 8rem;
+  width: 100%;
+}
+
+.rulesBtn:hover {
+  color: hsl(229, 25%, 31%);
+  background-color: white;
+  border-color: white;
+}
+
+.rulesModal {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  display: none;
+}
+
+.rulesImg {
+  width: 20rem;
+  margin-top: 2.35rem;
+}
+
+.rulesHeading {
+  color: hsl(229, 25%, 31%);
+  /* margin-top: 3rem; */
+}
+
+.closeBtnMob {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.resultModal {
+  width: 100%;
+  height: 60%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnPicks {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.btnPicks .btnCont {
+  width: 7rem;
+  height: 7rem;
+}
+
+.btnPicks .btn {
+  width: 5.5rem;
+  height: 5.5rem;
+}
+
+.btnPicks .btn img {
+  height: 3rem;
+}
+
+.resultMsg {
+  color: white;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.playAgainBtn {
+  background-color: white;
+  color: hsl(229, 25%, 31%);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.playAgainBtn:hover {
+  color: #9d1836;
+}
+
+.resultMsgAndBtn {
+  margin-top: auto;
+  width: 15rem;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 2s;
+}
+
+.pickLabel {
+  position: absolute;
+  bottom: -4rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.userPickCont,
+.computerPickCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emptySlot {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  background-color: hsla(238, 48%, 15%, 0.574);
+  border-radius: 50%;
+}
+
+.userPick,
+.computerPick {
+  top: 0;
+  left: 0;
+}
+
+.computerPick {
+  opacity: 0;
+  transition: opacity 1s, box-shadow 1s;
+}
+
+.show {
+  display: flex;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.closeBtnDesk {
+  display: none;
+}
+
+@media (min-width: 60rem) {
+  .appCont {
+    padding: 2rem 5rem;
+  }
+  .logoAndScore {
+    max-width: 45rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .score {
+    width: 9rem;
+    height: 7rem;
+    padding: 1rem;
+  }
+  .scoreNum {
+    font-size: 3.5rem;
+  }
+  .scoreHeading {
+    font-size: 1rem;
+  }
+  .logo {
+    width: 7rem;
+    margin-left: 1rem;
+  }
+
+  .rulesBtn {
+    width: 100%;
+    align-self: flex-end;
+  }
+
+  .buttonsAndPentagon {
+    width: 27rem;
+  }
+
+  .pentagon {
+    width: 16.5rem;
+    top: 5.5rem;
+    left: 5rem;
+  }
+
+  .btnCont {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .btn {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .spockImg,
+  .lizardImg,
+  .paperImg,
+  .scissorsImg,
+  .spockImg {
+    height: 3rem;
+  }
+
+  .rockImg {
+    height: 2.5rem;
+  }
+
+  .rulesModal {
+    display: none;
+    width: 25rem;
+    height: auto;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    top: 8rem;
+    left: calc(50% - 12.5rem);
+    z-index: 2;
+    box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+  }
+
+  .closeBtnMob {
+    display: none;
+    cursor: pointer;
+  }
+
+  .closeBtnDesk {
+    display: flex;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .rulesHeadingAndCloseBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .rulesImg {
+    margin: 0;
+  }
+
+  .rulesHeading {
+    margin: 0rem;
+  }
+
+  .backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: none;
+    z-index: 0;
+  }
+
+  .btnPicks {
+    margin-top: 8rem;
+    justify-content: space-between;
+    width: 35rem;
+    transition: width 1s ease-out;
+  }
+
+  .emptySlot {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .pickLabel {
+    top: -6rem;
+    font-size: 1rem;
+  }
+
+  .btnPicks .btnCont {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .resultMsgAndBtn {
+    position: absolute;
+    top: 50%;
+  }
+  .btnPicks .btn {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .btnPicks .btn img {
+    height: 5rem;
+  }
+
+  .show {
+    display: flex;
+    opacity: 1;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .separate {
+    width: 100%;
+  }
+}
+
+
+
+@media(min-width:70rem){
+  .appCont{
+    padding: 2rem 10%;
+  }
+}

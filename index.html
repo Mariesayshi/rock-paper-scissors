@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <section class="appCont">
+      <div class="logoAndScore">
+        <img src="./images/logo-bonus.svg" class="logo" />
+        <div class="score">
+          <span class="scoreHeading">score</span>
+          <div class="scoreNum">0</div>
+        </div>
+      </div>
+      <div class="buttonsAndPentagon">
+        <img class="pentagon" src="./images/bg-pentagon.svg" />
+        <div class="buttonsCont">
+          <div id="scissors" class="scissorsCont btnCont hasActive">
+            <div class="scissors btn">
+              <img class="scissorsImg" src="./images/icon-scissors.svg" />
+            </div>
+          </div>
+          <div class="spockAndPaper">
+            <div id="spock" class="spockCont btnCont hasActive">
+              <div class="spock btn">
+                <img class="spockImg" src="./images/icon-spock.svg" />
+              </div>
+            </div>
+            <div id="paper" class="paperCont btnCont hasActive">
+              <div class="paper btn">
+                <img class="paperImg" src="./images/icon-paper.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="lizardAndRock">
+            <div id="lizard" class="lizardCont btnCont hasActive">
+              <div class="lizard btn">
+                <img class="lizardImg" src="./images/icon-lizard.svg" />
+              </div>
+            </div>
+            <div id="rock" class="rockCont btnCont hasActive">
+              <div class="rock btn">
+                <img class="rockImg" src="./images/icon-rock.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="resultModal">
+        <div class="btnPicks">
+          <div class="userPickCont">
+            <p class="pickLabel">You Picked</p>
+          </div>
+          <div class="computerPickCont">
+            <div class="emptySlot"></div>
+            <p class="pickLabel">The House Picked</p>
+          </div>
+        </div>
+        <div class="resultMsgAndBtn">
+          <div class="resultMsg"></div>
+          <div class="playAgainBtn">Play Again</div>
+        </div>
+      </div>
+      <div class="rulesBtn">rules</div>
+    </section>
+    <div class="rulesModal">
+      <div class="rulesHeadingAndCloseBtn">
+      <h2 class="rulesHeading">RULES</h2>
+      <img class="closeBtnDesk" src="./images/icon-close.svg" />
+
+    </div>
+      <img class="rulesImg" src="./images/image-rules-bonus.svg" />
+      <img class="closeBtnMob" src="./images/icon-close.svg" />
+    </div>
+    <div class="backdrop"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
